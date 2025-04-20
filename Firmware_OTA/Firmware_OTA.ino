@@ -22,7 +22,7 @@ String fetchCurrentVersion() {
     HTTPClient http;
     http.begin(VERSION_URL);
     int httpResponseCode = http.GET();
-
+    
     String version = "";
     if (httpResponseCode == HTTP_CODE_OK) {
         version = http.getString();
